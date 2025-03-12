@@ -18,7 +18,7 @@ def send_mail():
         s = smtplib.SMTP('smtp.gmail.com', 587)
         s.starttls()
         s.login(sender_email, "fakb yfvk dsec ozxv")
-        message = f"A sign in attempt requires further verification. To complete the sign in, enter the verification code. Your verification code is {verification_code}. Please note that the code is valid for only one session. If you try to refresh the page or leave the portal, you will be required to regenerate a new code. Do not share this code with anyone."
+        message = f"A sign in attempt requires further verification. To complete the sign in, enter the verification code.\nYour verification code is {verification_code}.\n\nPlease note that the code is valid for only one session. If you try to refresh the page or leave the portal, you will be required to regenerate a new code.\n\nDo not share this code with anyone."
 
         try:
             s.sendmail(sender_email, i, message)
