@@ -11,13 +11,13 @@ def send_mail():
     except:
         print("File not available")
 
-    sender_email="kanhamohapatra12@gmail.com"
+    sender_email="sender mail"
     
     for i in employee_mails:
         verification_code=''.join(random.choices(string.ascii_uppercase+string.ascii_lowercase+string.digits,k=5))
         s = smtplib.SMTP('smtp.gmail.com', 587)
         s.starttls()
-        s.login(sender_email, "fakb yfvk dsec ozxv")
+        s.login(sender_email, "password")
         message = f"A sign in attempt requires further verification. To complete the sign in, enter the verification code.\nYour verification code is {verification_code}.\n\nPlease note that the code is valid for only one session. If you try to refresh the page or leave the portal, you will be required to regenerate a new code.\n\nDo not share this code with anyone."
 
         try:
