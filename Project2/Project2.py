@@ -87,10 +87,10 @@ def issue_number(fullname,email):
     mail(fullname,email)
 
 def mail(fullname,email):
-    sender_email="kanhamohapatra12@gmail.com"
+    sender_email="sender mail"
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
-    s.login(sender_email, "fakb yfvk dsec ozxv")
+    s.login(sender_email, "password")
     message = f"Congratulation {fullname} your new airtel sim has been issued and you number has also been issued"
 
     try:
