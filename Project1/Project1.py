@@ -27,10 +27,10 @@ def get_data():
         print("API link is not activated")
 
 def send_mail(final_amount,gst_amount,final_amount_including_gst,mail):
-    sender_email="kanhamohapatra12@gmail.com"
+    sender_email="sender mail"
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
-    s.login(sender_email, "fakb yfvk dsec ozxv")
+    s.login(sender_email, "password")
     message = f"Your total bill before GST is {final_amount} \nGST = {gst_amount} \nYour total bill after 18% GST is: {final_amount_including_gst}"
 
     try:
